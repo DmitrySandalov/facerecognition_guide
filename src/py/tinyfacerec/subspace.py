@@ -40,7 +40,7 @@ def lda(X, y, num_components=0):
 	y = np.asarray(y)
 	[n,d] = X.shape
 	c = np.unique(y)
-	if (num_components <= 0) or (num_component>(len(c)-1)):
+	if (num_components <= 0) or (num_components > (len(c) - 1)):
 		num_components = (len(c)-1)
 	meanTotal = X.mean(axis=0)
 	Sw = np.zeros((d, d), dtype=np.float32)
