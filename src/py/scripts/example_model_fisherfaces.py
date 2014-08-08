@@ -15,7 +15,7 @@ if __name__ == '__main__':
     
     # read images
     [X,y] = read_images(sys.argv[1])
-    # compute the eigenfaces model
+    # compute the fisherfaces model
     model = FisherfacesModel(X[1:], y[1:])
     # get a prediction for the first observation
     print "expected =", y[0], "/", "predicted =", model.predict(X[0])
